@@ -1,12 +1,17 @@
 require('dotenv').config()
 const express = require('express')
-const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer')
+const path = require('path')
 const app = express()
 const port = 3000
 
 
 app.listen(port, () => {
   console.log(`nodemailerProject is listening at http://localhost:${port}`)
+});
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, 'static/info-form.html'));
 });
 
 let transporter = nodemailer.createTransport({
@@ -28,10 +33,10 @@ let mailOptions = {
   text: 'Hi from your nodemailer project'
 };
 
-transporter.sendMail(mailOptions, function(err, data) {
-  if (err) {
-    console.log("Error " + err);
-  } else {
-    console.log("Email sent successfully");
-  }
-});
+/* transporter.sendMail(mailOptions, function(err, data) { */
+/*   if (err) { */
+/*     console.log("Error " + err); */
+/*   } else { */
+/*     console.log("Email sent successfully"); */
+/*   } */
+/* }); */
