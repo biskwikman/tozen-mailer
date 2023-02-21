@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title></title>
   <link href="style.css" rel="stylesheet" />
 </head>
+
 <body>
 
-  <h1>INFO FORM</h1>
+  <h1>Join Tozen Union</h1>
+  <p>Tozen Union is run by its members.
+    We welcome all workers in Japan who are willing to fight for fairer conditions.
+    Here's how to join us.</p>
+  <ol>
+    <li>
+      <p>First, please complete the form below</p>
+    </li>
+    <li>
+      <p>We'll contact you to discuss your application (if you have not already spoken with somebody from the union)</p>
+    </li>
+    <li>
+      <p>Finally, we'll set up your union dues and approve your membership</p>
+    </li>
+  </ol>
+  <p>If you have any difficulties or questions, please email
+    <a href="mailto:field@tozenunion.org">field@tozenunion.org</a>
+  </p>
+  <p>
+    <a href="">Read more: who should join and what to expect (placeholder link)</a>
+  </p>
+
+  <form action="/" method="POST" data-success-redirect="/postsubmit.html">
+    <fieldset>
+      <legend>Name (Roman letters)</legend>
+      <label>
+        <input name="fname">
+        <span>First name</span>
+      </label>
+      <label>
+        <input name="lname">
+        <span>Last name</span>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Name (Japanese)</legend>
+      <label>
+        <input name="fname">
+        <span>First name</span>
+      </label>
+      <label>
+        <input name="lname">
+        <span>Last name</span>
+      </label>
+    </fieldset>
+    <label>
+      <input name="email">
+      <span>Email address</span>
+    </label>
+    <input type="submit" value="Submit Application" />
+  </form>
+
   <script>
   </script>
 </body>
+
 </html>
